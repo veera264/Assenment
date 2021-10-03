@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo</title>
+        <style>
+            body{
+                background-color:lightyellow;
+                width:auto;
+
+            }
+            .container{
+                padding: 30px;
+                margin: 30px;
+                
+            
+            }
+            .scroll{
+                padding:25px;
+                background-color: rgb(192, 173, 173);
+                font-size: 30px;
+                font-family:'Times New Roman', Times, serif;
+                font-display: initial;
+                font-weight:200px;
+                text-transform: capitalize;
+                font-style: italic;
+            }
+            h3{
+                font-size:30px;
+            }
+            .fields{
+                padding:8px;
+                width: 100%;
+                
+
+            }
+            .inner{
+                padding-bottom: 15px;
+                display: block;
+            }
+           
+            .can{
+                margin-left:10px;
+                color: red;
+            }
+            
+        </style>
+        <script>
+            function valid(){
+                let name=document.getElementById('name').value;
+                let email=document.getElementById('email').value;
+                let number=document.getElementById('num').value;
+                let dob=document.getElementById('dob').value;
+                let Adress=document.getElementById('add').value;
+                if(name=="" || email==null){
+                  alert("please Enter u r name")
+                    
+                }
+                if(email=="" || email==null){
+                    alert("please enter email")
+                    focus.apply();
+                }
+                if(number=="" || number==null){
+            
+                    alert("please enter Your mobile Number")
+                    focus.apply();
+                }
+                if(dob=="" || dob==null){
+                    alert("please enter Date Of Birth")
+                    focus.apply();
+                }
+                if(Adress=="" || Adress==null){
+                    alert("please enter Your adress to communication")
+                    focus.apply();
+                }
+            
+            }
+            function cancel(){
+                
+                alert("You are cancled the request:")
+                location.reload();
+            }
+            function add(){
+                let x=document.getElementById('num1').value;
+                let y=document.getElementById('num2').value;
+                if(x && y!=null){
+                    let z=parseInt(x)+parseInt(y);
+                    alert("The addition of "+x+" and "+y+" ="+z)
+                }
+                else{
+                    alert("Please enter number in Two fields")
+                }
+            }
+        </script>
+    </head>
+    <body class="container">
+            <div class="scroll">
+                <marquee behavior="scroll" scrollamount="10" direction="left">sir/mam i am a fresher i dont have any experience so  i try my best to do your assignment i hope u like this Thank you.....</marquee>    
+             </div>
+             <h3>Enter Details:</h3>
+             <span id="error"></span>
+            <form class="fields" onsubmit="return valid()">
+                <div class="inner">
+                         Name:<input type="text" id="name" minlength="5" placeholder="Enter u r name">
+                </div>
+                <div class="inner">
+                
+                    Email id:<input type="email" id="email" placeholder="Enter u r email id">
+                </div>
+                <div class="inner">
+                    Mobile Number:<input type="number" id="num" placeholder="Enter u r mobile number">
+                </div>
+                <div class="inner">
+                     Date of Birth:<input type="date" id="dob">
+                </div>
+                <div class="inner">
+                     Address:<textarea placeholder="Please enter u r Address" id="add"></textarea>
+                 </div>
+                 <div class="inner1">
+                         <input type="submit">
+                </div>
+                
+            </form>
+            <button class="can" onclick="cancel()">Cancel</button>
+        <div>
+            <h3>Adding two Numbers:</h3>
+            <form class="add12">
+                Number1:<input type="number" id="num1"><br>
+                Number2:<input type="number" id="num2"><br>
+                <button onclick="add()">Click</button>
+            </form>
+        </div>
+    </body>
+</html>
